@@ -8,7 +8,7 @@ package edu.hdsb.gwss.ics4u.nick;
 
 /**
  *
- * @author Nick
+ * @author Nick Sept 3/2014
  */
 public class TypeConversion {
 
