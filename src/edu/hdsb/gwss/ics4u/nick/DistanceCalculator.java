@@ -39,9 +39,9 @@ public class DistanceCalculator {
         System.out.println("Please enter the latitude for place 1");
         lat2 = input.nextDouble();
         
-        distance = 6378.8 * acos(sin(lat1) * sin(lat2) + cos(lat1) * cos(lat2) * cos(long2 - long1));
+        distance = 6378.8 * acos(sin(lat1/57.2958) * sin(lat2/57.2958) + cos(lat1/57.2958) * cos(lat2/57.2958) * cos(long2/57.2958 - long1/57.2958));
         
-        System.out.println(distance  + "km");
+        System.out.println(distance + "km");
 
     }
 
