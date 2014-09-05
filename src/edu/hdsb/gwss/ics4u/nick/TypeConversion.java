@@ -16,7 +16,28 @@ public class TypeConversion {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        //double
+        //double to char
+        double x = 10323.2;
+        char a = (char) x;
+        //double to string
+        String b = Double.toString(x);
+        //double to int
+        int c = (int) x;
+        //double to long
+        long d = (long) x;
+        
+        //int
+        //int to boolean
+        int e = 1;
+        
+        
+        
+        
+        
+        //string to double
+        String o = "Hi";
+        double a = Double.parseDouble(o);
     }
     
 }
