@@ -15,13 +15,25 @@ public class Eratosthenes {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        double i;
-        for (i = 1; i < 1001; i++) {
-            
-            System.out.println(i);
-            
+       boolean[] primes = new boolean[1000];
+       
+       for( int i = 0; i < primes.length; i++ ) {
+           primes[i] = true;
+       }
+       
+       primes[0] = false;
+       primes[1] = false;
+       for(int i =2; i < primes.length; i++ ){
 
-        }
+           for( int p = i+i; p < primes.length; p = p + i ){ 
+
+                   primes[p] = false;
+               
+               
+           }
+       }
+       
+       
     }
 
 }
