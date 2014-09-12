@@ -219,7 +219,7 @@ public class carData {
         System.out.format("%5s %-53s %-6s %-10s %-13s %-10s \n", "Year", "Name", "Price", "Speed", "Horse Power", "0-100km/h");//farmat all
 
         for (int car = 0; car < intData.length; car++) {
-            if (intData[car][1] > 1000000) {//fitter by a miilion
+            if (intData[car][1] > 1000000) {//fitter by a milion
                 System.out.format("%5d %-52s $%-7s %-4s km/h %-4s hp       %-4s seconds \n", intData[car][0], stringData[car][0], intData[car][1], intData[car][2], intData[car][3], doubleData[car][0]);//data from all
             }
         }

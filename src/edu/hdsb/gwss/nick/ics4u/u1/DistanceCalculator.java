@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.hdsb.gwss.ics4u.nick;
+package edu.hdsb.gwss.nick.ics4u.u1;
 
 import static java.lang.Math.acos;
 import static java.lang.Math.cos;
