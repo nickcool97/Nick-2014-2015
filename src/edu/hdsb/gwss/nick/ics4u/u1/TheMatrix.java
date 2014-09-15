@@ -26,6 +26,7 @@ public class TheMatrix {
         System.out.println("3:Mutiply the Marix by a Constant");
         System.out.println("4:Mutiply Two Matrices");
         System.out.println("Your choice is");
+                
         int choice = input.nextInt();
         int[][] marix = null;
         int[][] transposedMarix = null;
