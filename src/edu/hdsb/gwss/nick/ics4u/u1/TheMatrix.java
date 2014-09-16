@@ -39,6 +39,7 @@ public class TheMatrix {
 
         if (choice == 2) {
             marix = generateMatrix();
+            displayMatrix(marix);
             transposedMarix = generateTranspose(marix);
             System.out.println("-----------------------------------");
             displayMatrix(transposedMarix);
@@ -46,6 +47,7 @@ public class TheMatrix {
 
         if (choice == 3) {
             marix = generateMatrix();
+            displayMatrix(marix);
             multiplyMatrixByConstant(marix);
             System.out.println("-----------------------------------");
             displayMatrix(marix);
@@ -53,7 +55,10 @@ public class TheMatrix {
 
         if (choice == 4) {
             marix = generateMatrix();
+            displayMatrix(marix);
             transposedMarix = generateTranspose(marix);
+            System.out.println("-----------------------------------");
+            displayMatrix(transposedMarix);
             multiplyMatrix(marix, transposedMarix);
             System.out.println("-----------------------------------");
             displayMatrix(marix);
