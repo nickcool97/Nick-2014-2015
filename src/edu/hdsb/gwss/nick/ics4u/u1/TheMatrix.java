@@ -26,9 +26,11 @@ public class TheMatrix {
         System.out.println("3:Mutiply the Marix by a Constant");
         System.out.println("4:Mutiply Two Matrices");
         System.out.println("Your choice is");
-                
+
         int choice = input.nextInt();
         int[][] marix = null;
+        int[][] marix2 = null;
+        int[][] multiplymarix = null;
         int[][] transposedMarix = null;
 
         if (choice == 1) {
@@ -56,12 +58,15 @@ public class TheMatrix {
         if (choice == 4) {
             marix = generateMatrix();
             displayMatrix(marix);
-            transposedMarix = generateTranspose(marix);
-            System.out.println("-----------------------------------");
-            displayMatrix(transposedMarix);
-            multiplyMatrix(marix, transposedMarix);
+            marix2 = generateMatrix();
+            transposedMarix = generateTranspose(marix2);
             System.out.println("-----------------------------------");
             displayMatrix(marix);
+            System.out.println("-----------------------------------");
+            displayMatrix(transposedMarix);
+            multiplymarix = multiplyMatrix(marix, transposedMarix);
+            System.out.println("-----------------------------------");
+            displayMatrix(multiplymarix);
         } else if (choice > 4) {
             System.out.println("Error: Wrong number entered");
         }
@@ -123,13 +128,15 @@ public class TheMatrix {
 
     }
 
-    public static int[][] multiplyMatrix(int[][] marix, int[][] transposedMarix) {
+    public static int[][] multiplyMatrix(int[][] marix, int[][] transposedMarix ) {
+        int[][] multiplymarix = new int[marix[0].length][marix.length];
         for (int row = 0; row < marix.length; row++) {
             for (int col = 0; col < marix.length; col++) {
-                marix[row][col] = marix[row][col] * transposedMarix[col][row];
+                
+                multiplymarix[row][col] = marix[row][col] * transposedMarix[col][row];
 
             }
         }
-        return marix;
+        return multiplymarix;
     }
 }
