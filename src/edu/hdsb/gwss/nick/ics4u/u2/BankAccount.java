@@ -18,6 +18,7 @@ public class BankAccount {
     private int branchNumber;
     private int pinNumber;
     private boolean accountActive;
+    private BankAccountClient owner;
 
     public BankAccount(int accountNumber, int branchNumber) {
         this.accountNumber = accountNumber;

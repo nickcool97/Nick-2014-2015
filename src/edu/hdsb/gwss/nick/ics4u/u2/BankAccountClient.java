@@ -5,6 +5,8 @@
  */
 package edu.hdsb.gwss.nick.ics4u.u2;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Nick
@@ -14,12 +16,16 @@ public class BankAccountClient {
     private String firstName;
     private String lastName; 
     private int SIN;
+    
+    private ArrayList<BankAccount> accounts;
 
     public BankAccountClient(String firstName, String lastName, int SIN) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.SIN = SIN;
+        this.SIN = SIN; 
+        this.accounts = new ArrayList<BankAccount>();
     }
+   
 
     public String getFirstName() {
         return firstName;
