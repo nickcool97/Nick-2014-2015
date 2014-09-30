@@ -24,7 +24,7 @@ public class Manufacturer {
     private boolean active;
     private int serialNumber;
     private ArrayList<Car> cars;
-    
+
     public Manufacturer() {
     }
 
@@ -65,18 +65,18 @@ public class Manufacturer {
         }
         return true;
     }
-    
+
     public boolean isValid() {
         boolean isValid = true;
         if (name == null) {
             isValid = false;
             if (serialNumber <= 0) {
-                System.out.print("invaild"); 
+                System.out.print("invaild");
                 isValid = false;
 
             }
         }
-       return isValid;
+        return isValid;
     }
 
     public String getName() {
@@ -119,5 +119,47 @@ public class Manufacturer {
         this.serialNumber = serialNumber;
     }
 
+    public void add(Car car) {
+        if (car == null) {
+            System.out.println("error: null can't be added");
+            if (isValid() == true) {
+                System.out.println("error: car is not valid");
+            }
+        } else {
+
+            this.cars.add(car);
+        }
+    }
+
+    public void remove(Car car) {
+        if (car == null) {
+            System.out.println("error: null can't be added");
+            if (isValid() == true) {
+                System.out.println("error: car is not valid");
+            } else {
+                this.cars.remove(car);
+            }
+
+        }
+    }
+
+    public Car get(int SerialNumber) {
+        Car car = null;
+        if (SerialNumber <= 0) {
+            System.out.println("error:Serial Number");
+            if (isValid() == true) {
+                System.out.println("error: car is not valid");
+            } else {
+                for (int i = 0; i < cars.size(); i++) {
+                    car = this.cars.get(i);
+                    if (car.getSerialNumber() == SerialNumber) {
+                        System.out.println(car);
+                    }
+                }
+
+            }
+        }
+        return car ;
+    }
     
 }

@@ -44,9 +44,7 @@ public class Car {
         return countriesID;
     }
 
-    public void setCountriesID(int countriesID) {
-        this.countriesID = countriesID;
-    }
+    
 
     public int getCompanyValue() {
         return companyValue;
