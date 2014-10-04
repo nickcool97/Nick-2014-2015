@@ -20,13 +20,7 @@ public class ManufacturerClient {
         mustang.setName( "Mustang GTO");
         mustang.setSerialNumber(1234);
         
-        Car focus = new Car();
-        Car taurus = new Car();
-
-        Manufacturer Chevrolet = new Manufacturer();
-        Car camaro = new Car();
-        Car corvette = new Car();
-        Car silverado = new Car();
+        
 
         // TEST CASE #1: ADD a valid car to the list.
         System.out.println("---------------------------");
@@ -48,7 +42,13 @@ public class ManufacturerClient {
         System.out.println("Manfacture: " + Ford.getName() + " # of Cars: " + Ford.getNumberOfCars());
         Ford.add(mustang);
         System.out.println("Manfacture: " + Ford.getName() + " # of Cars: " + Ford.getNumberOfCars());
+        
+        //TEST CASE #4: Removes Car from array list
+        
+        
+        
+        //TEST CASE #5: Get Car from list
 
     }
-
+    
 }

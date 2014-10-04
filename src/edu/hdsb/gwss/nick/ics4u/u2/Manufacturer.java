@@ -92,6 +92,7 @@ public class Manufacturer {
 
             }
             
+            
         }
         
         return isValid;
