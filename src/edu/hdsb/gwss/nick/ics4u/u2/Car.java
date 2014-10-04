@@ -69,6 +69,16 @@ public class Car {
     public void setSerialNumber(int serialNumber) {
         this.serialNumber = serialNumber;
     }
+    public boolean isValid() {
+        boolean isValid = true;
+        if (name == null||serialNumber <= 0) {
+            isValid = false;
+        }
+                    else if(isValid = true){
+                    System.out.println("Car is vaild");
+                    }
+        return isValid;
+    }
     
     
 }

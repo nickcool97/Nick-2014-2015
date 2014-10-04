@@ -23,16 +23,22 @@ public class Manufacturer {
     private int companyValue;
     private boolean active;
     private int serialNumber;
+    private Car get;
     private ArrayList<Car> cars;
 
     public Manufacturer() {
+        this.cars = new ArrayList<>();
+        
     }
 
     public Manufacturer(String name) {
+        this();
         this.name = name;
     }
+    
 
     public Manufacturer(String name, int countriesID, int companyValue, boolean active) {
+        this();
         this.name = name;
         this.countriesID = countriesID;
         this.companyValue = companyValue;
@@ -66,6 +72,16 @@ public class Manufacturer {
         return true;
     }
 
+    public Car getGet(int serialNumber) {
+        for(int i= 0; i < cars.size(); i++){
+            cars.get(i);
+            if(cars.get(i).getSerialNumber() == serialNumber){
+                System.out.println("Car is not valid");
+            }
+        }
+        return get;
+    }
+
     public boolean isValid() {
         boolean isValid = true;
         if (name == null) {
@@ -75,7 +91,9 @@ public class Manufacturer {
                 isValid = false;
 
             }
+            
         }
+        
         return isValid;
     }
 
@@ -119,12 +137,15 @@ public class Manufacturer {
         this.serialNumber = serialNumber;
     }
 
+    public int getNumberOfCars() {
+        return this.cars.size();
+    }
+    
     public void add(Car car) {
-        if (car == null) {
-            System.out.println("error: null can't be added");
-            if (isValid() == true) {
+        if (car == null || !car.isValid() ) {
+           
                 System.out.println("error: car is not valid");
-            }
+            
         } else {
 
             this.cars.add(car);
