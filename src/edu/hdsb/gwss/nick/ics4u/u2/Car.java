@@ -28,6 +28,11 @@ public class Car {
         return manufacturere;
     }
 
+    @Override
+    public String toString() {
+        return "Car{" + "manufacturere=" + manufacturere + ", name=" + name + ", countriesID=" + countriesID + ", companyValue=" + companyValue + ", active=" + active + ", serialNumber=" + serialNumber + '}';
+    }
+
     public void setManufacturere(Manufacturer manufacturere) {
         this.manufacturere = manufacturere;
     }

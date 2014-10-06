@@ -28,14 +28,13 @@ public class Manufacturer {
 
     public Manufacturer() {
         this.cars = new ArrayList<>();
-        
+
     }
 
     public Manufacturer(String name) {
         this();
         this.name = name;
     }
-    
 
     public Manufacturer(String name, int countriesID, int companyValue, boolean active) {
         this();
@@ -73,9 +72,9 @@ public class Manufacturer {
     }
 
     public Car getGet(int serialNumber) {
-        for(int i= 0; i < cars.size(); i++){
+        for (int i = 0; i < cars.size(); i++) {
             cars.get(i);
-            if(cars.get(i).getSerialNumber() == serialNumber){
+            if (cars.get(i).getSerialNumber() == serialNumber) {
                 System.out.println("Car is not valid");
             }
         }
@@ -91,10 +90,9 @@ public class Manufacturer {
                 isValid = false;
 
             }
-            
-            
+
         }
-        
+
         return isValid;
     }
 
@@ -141,47 +139,58 @@ public class Manufacturer {
     public int getNumberOfCars() {
         return this.cars.size();
     }
-    
-    public void add(Car car) {
-        if (car == null || !car.isValid() ) {
-           
-                System.out.println("error: car is not valid");
-            
-        } else {
 
+    public void add(Car car) {
+        if (car == null || !car.isValid()) {
+
+            System.out.println("error: car is not valid");
+
+        } 
+        
+        if(this.get(car.getSerialNumber())== null){
+            System.out.print("Car not on list");
             this.cars.add(car);
+        }
+        
+        else {
+
+            // dupicate
         }
     }
 
     public void remove(Car car) {
         if (car == null) {
-            System.out.println("error: null can't be added");
-            if (isValid() == true) {
-                System.out.println("error: car is not valid");
-            } else {
-                this.cars.remove(car);
-            }
+            System.out.println("error: null can't be removed");
+        } else {
+            boolean removed = this.cars.remove(car);
 
+            if (removed == true) {
+                System.out.println("Car was removed");
+
+            } else {
+                System.out.println("Car not on list");
+            }
         }
+
     }
 
     public Car get(int SerialNumber) {
         Car car = null;
         if (SerialNumber <= 0) {
             System.out.println("error:Serial Number");
-            if (isValid() == true) {
-                System.out.println("error: car is not valid");
-            } else {
-                for (int i = 0; i < cars.size(); i++) {
-                    car = this.cars.get(i);
-                    if (car.getSerialNumber() == SerialNumber) {
-                        System.out.println(car);
-                    }
-                }
-
-            }
         }
-        return car ;
+        if (isValid() == true) {
+            System.out.println("error: car is not valid");
+        } else {
+            for (int i = 0; i < cars.size(); i++) {
+                car = this.cars.get(i);
+                if (car.getSerialNumber() == SerialNumber) {
+                    System.out.println(car);
+                }
+            }
+
+        }
+        return car;
     }
-    
+
 }

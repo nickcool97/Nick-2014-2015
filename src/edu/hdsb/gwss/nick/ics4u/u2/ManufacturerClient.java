@@ -17,8 +17,11 @@ public class ManufacturerClient {
     public static void main(String[] args) {
         Manufacturer Ford = new Manufacturer();
         Car mustang = new Car();
+        Car tarus = new Car();
         mustang.setName( "Mustang GTO");
-        mustang.setSerialNumber(1234);
+        mustang.setSerialNumber(1);
+        tarus.setName("tarus");
+        
         
         
 
@@ -37,18 +40,46 @@ public class ManufacturerClient {
         System.out.println("Manfacture: " + Ford.getName() + " # of Cars: " + Ford.getNumberOfCars());
         
         //TEST CASE #3: ADD duplice data.
-         System.out.println("---------------------------");
+        System.out.println("---------------------------");
         System.out.println("TEST CASE 3: ADD duplice data");
         System.out.println("Manfacture: " + Ford.getName() + " # of Cars: " + Ford.getNumberOfCars());
         Ford.add(mustang);
         System.out.println("Manfacture: " + Ford.getName() + " # of Cars: " + Ford.getNumberOfCars());
         
         //TEST CASE #4: Removes Car from array list
+        System.out.println("---------------------------");
+        System.out.println("TEST CASE #4: Removes Car from array list.");
+        System.out.println("Manfacture: " + Ford.getName() + " # of Cars: " + Ford.getNumberOfCars());
+        Ford.remove(null);
+        System.out.println("Manfacture: " + Ford.getName() + " # of Cars: " + Ford.getNumberOfCars());
+        
+        //TEST CASE #5: Removes Car from array list
+        System.out.println("---------------------------");
+        System.out.println("TEST CASE #5: Removes Car from array list.");
+        System.out.println("Manfacture: " + Ford.getName() + " # of Cars: " + Ford.getNumberOfCars());
+        Ford.remove(tarus);
+        System.out.println("Manfacture: " + Ford.getName() + " # of Cars: " + Ford.getNumberOfCars());
         
         
-        
-        //TEST CASE #5: Get Car from list
+        //TEST CASE #6: Remove car from list
+        System.out.println("---------------------------");
+        System.out.println("TEST CASE #5: Removes Car from array list.");
+        System.out.println("Manfacture: " + Ford.getName() + " # of Cars: " + Ford.getNumberOfCars());
+        Ford.remove(mustang);
+        System.out.println("Manfacture: " + Ford.getName() + " # of Cars: " + Ford.getNumberOfCars());
 
+        
+        //TEST CASE #7: Get Car 
+        System.out.println("---------------------------");
+        System.out.println("TEST CASE #7: Get Car ");
+        mustang = Ford.get(1);
+        
+        
+        //TEST CASE #8: Get Car that does not exict
+        System.out.println("---------------------------");
+        System.out.println("TEST CASE #7: Get Car ");
+        mustang = Ford.get(2);
+        
     }
     
 }

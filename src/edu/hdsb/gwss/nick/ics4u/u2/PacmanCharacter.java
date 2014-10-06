@@ -13,12 +13,12 @@ import hsa.Console;
 public class PacmanCharacter {
 
     // CLASS VARIABLES
-    private static Console c;
+    protected static Console c;
     
     // OBJECT VARIABLES
     private boolean alive;
-    private int xLoc;
-    private int yLoc;
+    protected int xLoc;
+    protected int yLoc;
 
     public PacmanCharacter() {
         if( c == null ) {
