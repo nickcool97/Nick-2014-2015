@@ -6,14 +6,12 @@
 
 package edu.hdsb.gwss.nick.ics4u.u2;
 
-import java.awt.Color;
 
 /**
  *
  * @author Nick
  */
-public class Pacman extends PacmanGame{
-    
+public class Pacman extends PacmanCharacter{
     
        
        

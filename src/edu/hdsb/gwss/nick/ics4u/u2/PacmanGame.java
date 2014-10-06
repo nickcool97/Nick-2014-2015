@@ -13,8 +13,10 @@ import hsa.Console;
  * @author Nick
  */
 public class PacmanGame {
-     public static void main(String[] args) {
-    Console c = new Console();
-     }
-    
+ Console c = new Console();
+        PacmanCharacter.setConsole( c );
+        
+        // New Pacman
+        PacmanCharacter pacman = new PacmanCharacter();
+            
 }

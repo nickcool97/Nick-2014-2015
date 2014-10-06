@@ -10,6 +10,6 @@ package edu.hdsb.gwss.nick.ics4u.u2;
  *
  * @author Nick
  */
-public class Ghost extends PacmanGame{
+public class Ghost extends PacmanCharacter{
     
 }
