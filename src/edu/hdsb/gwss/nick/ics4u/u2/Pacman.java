@@ -15,8 +15,7 @@ import java.awt.Color;
 public class Pacman extends PacmanGame{
     
     
-        c.setColor(Color.yellow);
-        c.fillArc(0, 0, PACMAN_RADIUS, PACMAN_RADIUS, 30, 330);
+       
        
     
 }
