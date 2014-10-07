@@ -19,6 +19,7 @@ public class ManufacturerClient {
         Car mustang = new Car();
         Car tarus = new Car();
         mustang.setName( "Mustang GTO");
+        mustang.setManufacturere(Ford);
         mustang.setSerialNumber(1);
         tarus.setName("tarus");
         
@@ -70,6 +71,7 @@ public class ManufacturerClient {
 
         
         //TEST CASE #7: Get Car 
+        Ford.add(mustang);
         System.out.println("---------------------------");
         System.out.println("TEST CASE #7: Get Car ");
         mustang = Ford.get(1);
@@ -77,8 +79,10 @@ public class ManufacturerClient {
         
         //TEST CASE #8: Get Car that does not exict
         System.out.println("---------------------------");
-        System.out.println("TEST CASE #7: Get Car ");
+        System.out.println("TEST CASE #8: Get Car that does not exict ");
         mustang = Ford.get(2);
+        
+        
         
     }
     

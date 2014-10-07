@@ -147,15 +147,12 @@ public class Manufacturer {
 
         } 
         
-        if(this.get(car.getSerialNumber())== null){
+        else if(this.get(car.getSerialNumber())== null){
             System.out.print("Car not on list");
             this.cars.add(car);
         }
         
-        else {
-
-            // dupicate
-        }
+        
     }
 
     public void remove(Car car) {

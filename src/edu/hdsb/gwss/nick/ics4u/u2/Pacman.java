@@ -5,16 +5,36 @@
  */
 package edu.hdsb.gwss.nick.ics4u.u2;
 
+import hsa.Console;
+import java.awt.Color;
+
 /**
  *
  * @author Nick
  */
 public class Pacman extends PacmanCharacter {
+        int xLoc = 20;
+        int yLoc = 20;
 
     public static final int RADIUS = 40;
-    
-    private void draw() {
-        c.fillArc(xLoc, yLoc, RADIUS, height, startAngle, arcAngle);
+
+    public Pacman() {
     }
+
+    public Pacman(Console hsaConsole) {
+        super(hsaConsole);
+    }
+
+    public Pacman(boolean alive, int xLoc, int yLoc) {
+        super(alive, xLoc, yLoc);
+    }
+    
+    
+    
+    private void drawPacman() {
+        c.setColor(Color.yellow);
+        c.fillArc(xLoc, yLoc, RADIUS,RADIUS, 30, 330);
+    }
+    
 
 }
