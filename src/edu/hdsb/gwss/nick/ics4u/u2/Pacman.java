@@ -19,6 +19,7 @@ public class Pacman extends PacmanCharacter {
     public static final int RADIUS = 40;
 
     public Pacman() {
+        this.draw();
     }
 
     public Pacman(Console hsaConsole) {
@@ -31,7 +32,7 @@ public class Pacman extends PacmanCharacter {
     
     
     
-    private void drawPacman() {
+    protected void draw() {
         c.setColor(Color.yellow);
         c.fillArc(xLoc, yLoc, RADIUS,RADIUS, 30, 330);
     }

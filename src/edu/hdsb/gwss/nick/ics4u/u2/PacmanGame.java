@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package edu.hdsb.gwss.nick.ics4u.u2;
 
 import hsa.Console;
@@ -13,14 +12,21 @@ import hsa.Console;
  * @author Nick
  */
 public class PacmanGame {
-    
-     public static void main(String[] args) {
- Console c = new Console();
- PacmanCharacter.setConsole(c);
-       
-        
+
+    public static void main(String[] args) {
+        Console c = new Console();
+        PacmanCharacter.setConsole(c);
+
         // New Pacman
         Pacman pacman = new Pacman();
-            
-     }
+        pacman.moveRight();
+        
+        Ghost inky = new Ghost();
+        Ghost blinky = new Ghost();
+        Ghost pinky = new Ghost();
+        Ghost clyde = new Ghost();
+        
+
+    }
+
 }

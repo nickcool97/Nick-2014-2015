@@ -6,14 +6,27 @@
 
 package edu.hdsb.gwss.nick.ics4u.u2;
 
+import static edu.hdsb.gwss.nick.ics4u.u2.Pacman.RADIUS;
+import java.awt.Color;
+
 /**
  *
  * @author Nick
  */
 public class Ghost extends PacmanCharacter{
-    
-    private void drawGhosts() {
-        
+     private static int ghostLength = 20;
+     private static int ghostWidth = 20;
+
+    public Ghost() {
+        this.draw();
     }
+     
+    
+    protected void draw() {
+        c.setColor(Color.pink);
+        c.fillArc(xLoc, yLoc,ghostLength ,ghostWidth, 0, 360);
+        c.fillRect(xLoc, yLoc + 10 , 20, 20);
+    }
+    
     
 }

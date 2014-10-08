@@ -65,18 +65,28 @@ public class PacmanCharacter {
     }
     
     public void moveLeft( ) {
-        
+        this.erase();
+        this.xLoc = this.xLoc - 10;
+        this.draw();
     }
     
     public void moveRight( ) {
-        
+        this.erase();
+        this.xLoc = this.xLoc + 10;
+        this.draw();
     }
     
     public void moveUp( ) {
+        this.erase();
+        this.yLoc = this.yLoc + 10;
+        this.draw();
         
     }
     
     public void moveDown( ) {
+        this.erase();
+        this.yLoc = this.yLoc - 10;
+        this.draw();
         
     }
     
