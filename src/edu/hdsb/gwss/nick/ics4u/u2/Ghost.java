@@ -16,14 +16,15 @@ import java.awt.Color;
 public class Ghost extends PacmanCharacter{
      private static int ghostLength = 20;
      private static int ghostWidth = 20;
+     Color color;
 
-    public Ghost() {
+    public Ghost(Color color, int xLoc, int yLoc) {
         this.draw();
     }
      
     
     protected void draw() {
-        c.setColor(Color.pink);
+        c.setColor(color);
         c.fillArc(xLoc, yLoc,ghostLength ,ghostWidth, 0, 360);
         c.fillRect(xLoc, yLoc + 10 , 20, 20);
     }

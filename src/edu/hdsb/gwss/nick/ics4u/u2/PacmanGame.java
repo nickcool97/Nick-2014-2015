@@ -6,6 +6,10 @@
 package edu.hdsb.gwss.nick.ics4u.u2;
 
 import hsa.Console;
+import java.awt.Color;
+import static java.awt.Color.orange;
+import static java.awt.Color.pink;
+import static java.awt.Color.red;
 
 /**
  *
@@ -21,10 +25,10 @@ public class PacmanGame {
         Pacman pacman = new Pacman();
         pacman.moveRight();
         
-        Ghost inky = new Ghost();
-        Ghost blinky = new Ghost();
-        Ghost pinky = new Ghost();
-        Ghost clyde = new Ghost();
+        Ghost inky = new Ghost(Color.cyan,0,0);
+        Ghost blinky = new Ghost(Color.red,100,25);
+        Ghost pinky = new Ghost(Color.pink,100,50);
+        Ghost clyde = new Ghost(Color.orange,100,75);
         
 
     }
