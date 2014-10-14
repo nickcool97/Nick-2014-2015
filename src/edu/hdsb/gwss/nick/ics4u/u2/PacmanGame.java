@@ -26,9 +26,9 @@ public class PacmanGame {
         pacman.moveRight();
         
         Ghost inky = new Ghost(Color.cyan,0,0);
-        Ghost blinky = new Ghost(Color.red,100,25);
-        Ghost pinky = new Ghost(Color.pink,100,50);
-        Ghost clyde = new Ghost(Color.orange,100,75);
+        Ghost blinky = new Ghost(Color.red,25,25);
+        Ghost pinky = new Ghost(Color.pink,50,50);
+        Ghost clyde = new Ghost(Color.orange,75,75);
         
 
     }
