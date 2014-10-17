@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package edu.hdsb.gwss.ics4c;
 
 /**
@@ -11,12 +10,44 @@ package edu.hdsb.gwss.ics4c;
  * @author Nick
  */
 public class Triva extends javax.swing.JFrame {
-    
+
+    String[][] questions = {
+        {"What is Supermans weakness", "Kryptonite", "Chlorine", "Hydrogen", "Steel"},
+        {"What is supermans home plant", "Mars", " Krypton", "Pluto", "Venus "},
+        {"What is Clark Kent's middle name?", "Thomas", "Joseph", "Jacob", "Walter"},
+        {"What member of the Superman family died in Crisis on Infinite Earths?", "Superman", "Lois Lane", "Jimmy Olson", "Supergirl"},
+        {"You Win", "Try again", "Exit", "", ""},};
+
+    int[] answers = {1, 2, 2, 4};
+
+    int currentQuetion;
+
     /**
      * Creates new form Triva
      */
     public Triva() {
         initComponents();
+        currentQuetion = 0;
+        this.questionBox.setText(questions[currentQuetion][0]);
+        this.answerA.setText(questions[currentQuetion][1]);
+        this.answerB.setText(questions[currentQuetion][2]);
+        this.answerC.setText(questions[currentQuetion][3]);
+        this.answerD.setText(questions[currentQuetion][4]);
+
+    }
+
+    public void reset() {
+        if (currentQuetion <= this.questions.length) {
+            this.questionBox.setText(questions[currentQuetion][0]);
+            this.answerA.setText(questions[currentQuetion][1]);
+            this.answerB.setText(questions[currentQuetion][2]);
+            this.answerC.setText(questions[currentQuetion][3]);
+            this.answerD.setText(questions[currentQuetion][4]);
+        }
+        else {
+            this.answerC.setVisible(false);
+            this.answerD.setVisible(false);
+        }
     }
 
     /**
@@ -31,9 +62,9 @@ public class Triva extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         answerA = new javax.swing.JButton();
-        AnwerB = new javax.swing.JButton();
-        Button3 = new javax.swing.JButton();
-        Button4 = new javax.swing.JButton();
+        answerB = new javax.swing.JButton();
+        answerC = new javax.swing.JButton();
+        answerD = new javax.swing.JButton();
         questionBox = new javax.swing.JLabel();
         correctIncorrectBox = new javax.swing.JLabel();
 
@@ -56,24 +87,24 @@ public class Triva extends javax.swing.JFrame {
             }
         });
 
-        AnwerB.setText("Chlorine");
-        AnwerB.addActionListener(new java.awt.event.ActionListener() {
+        answerB.setText("Chlorine");
+        answerB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AnwerBActionPerformed(evt);
+                answerBActionPerformed(evt);
             }
         });
 
-        Button3.setText("Hydrogen");
-        Button3.addActionListener(new java.awt.event.ActionListener() {
+        answerC.setText("Hydrogen");
+        answerC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Button3ActionPerformed(evt);
+                answerCActionPerformed(evt);
             }
         });
 
-        Button4.setText("Steel");
-        Button4.addActionListener(new java.awt.event.ActionListener() {
+        answerD.setText("Steel");
+        answerD.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Button4ActionPerformed(evt);
+                answerDActionPerformed(evt);
             }
         });
 
@@ -94,15 +125,15 @@ public class Triva extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(answerA)
                         .addGap(60, 60, 60)
-                        .addComponent(AnwerB)
+                        .addComponent(answerB)
                         .addGap(50, 50, 50)
-                        .addComponent(Button3)
+                        .addComponent(answerC)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(correctIncorrectBox, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(93, 93, 93)))
-                .addComponent(Button4)
+                .addComponent(answerD)
                 .addGap(29, 29, 29))
         );
         jPanel1Layout.setVerticalGroup(
@@ -111,11 +142,12 @@ public class Triva extends javax.swing.JFrame {
                 .addGap(28, 28, 28)
                 .addComponent(questionBox, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(45, 45, 45)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(answerA)
-                    .addComponent(Button3)
-                    .addComponent(AnwerB)
-                    .addComponent(Button4))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(answerA, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(answerC)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(answerB)
+                        .addComponent(answerD)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
                 .addComponent(correctIncorrectBox, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(68, 68, 68))
@@ -140,25 +172,66 @@ public class Triva extends javax.swing.JFrame {
     }//GEN-LAST:event_answerAMouseClicked
 
     private void answerAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_answerAActionPerformed
-       
-        this.correctIncorrectBox.setText("Correct");
+
         
+      
+     
+        if( currentQuetion == 4 ) {
+            currentQuetion = 0;
+            reset();
+        }
+        else if (1 == this.answers[currentQuetion]) {
+            this.correctIncorrectBox.setText("Correct");
+            currentQuetion++;
+            reset();
+        } else {
+            this.correctIncorrectBox.setText("Incorrect");
+
+        }
+
     }//GEN-LAST:event_answerAActionPerformed
 
-    private void AnwerBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AnwerBActionPerformed
+    private void answerBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_answerBActionPerformed
         // TODO add your handling code here:
-        this.correctIncorrectBox.setText("Incorrect");
-    }//GEN-LAST:event_AnwerBActionPerformed
+        if( currentQuetion == 4 ) {
+            this.dispose();
+            this.setVisible(false);
+            System.exit(-1);
+        }
+        else if (2 == this.answers[currentQuetion]) {
+            this.correctIncorrectBox.setText("Correct");
+            currentQuetion++;
+            reset();
+        } else {
+            this.correctIncorrectBox.setText("Incorrect");
 
-    private void Button3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button3ActionPerformed
-        // TODO add your handling code here:
-        this.correctIncorrectBox.setText("Incorrect");
-    }//GEN-LAST:event_Button3ActionPerformed
+        }
 
-    private void Button4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button4ActionPerformed
+    }//GEN-LAST:event_answerBActionPerformed
+
+    private void answerCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_answerCActionPerformed
         // TODO add your handling code here:
-        this.correctIncorrectBox.setText("Incorrect");
-    }//GEN-LAST:event_Button4ActionPerformed
+        if (3 == this.answers[currentQuetion]) {
+            this.correctIncorrectBox.setText("Correct");
+            currentQuetion++;
+            reset();
+        } else {
+            this.correctIncorrectBox.setText("Incorrect");
+
+        }
+    }//GEN-LAST:event_answerCActionPerformed
+
+    private void answerDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_answerDActionPerformed
+        // TODO add your handling code here:
+        if (4 == this.answers[currentQuetion]) {
+            this.correctIncorrectBox.setText("Correct");
+            currentQuetion++;
+            reset();
+        } else {
+            this.correctIncorrectBox.setText("Incorrect");
+
+        }
+    }//GEN-LAST:event_answerDActionPerformed
 
     /**
      * @param args the command line arguments
@@ -196,10 +269,10 @@ public class Triva extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton AnwerB;
-    private javax.swing.JButton Button3;
-    private javax.swing.JButton Button4;
     private javax.swing.JButton answerA;
+    private javax.swing.JButton answerB;
+    private javax.swing.JButton answerC;
+    private javax.swing.JButton answerD;
     private javax.swing.JLabel correctIncorrectBox;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;

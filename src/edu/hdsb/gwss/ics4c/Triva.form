@@ -66,9 +66,9 @@
                       <Group type="102" attributes="0">
                           <Component id="answerA" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
-                          <Component id="AnwerB" min="-2" max="-2" attributes="0"/>
+                          <Component id="answerB" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-                          <Component id="Button3" min="-2" max="-2" attributes="0"/>
+                          <Component id="answerC" min="-2" max="-2" attributes="0"/>
                           <EmptySpace pref="48" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
@@ -77,7 +77,7 @@
                           <EmptySpace min="-2" pref="93" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <Component id="Button4" min="-2" max="-2" attributes="0"/>
+                  <Component id="answerD" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -88,11 +88,13 @@
                   <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                   <Component id="questionBox" min="-2" pref="36" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="answerA" alignment="1" min="-2" max="-2" attributes="0"/>
-                      <Component id="Button3" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="AnwerB" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="Button4" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="answerC" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="answerB" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="answerD" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                   <EmptySpace pref="74" max="32767" attributes="0"/>
                   <Component id="correctIncorrectBox" min="-2" pref="20" max="-2" attributes="0"/>
@@ -111,28 +113,28 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="answerAActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="AnwerB">
+        <Component class="javax.swing.JButton" name="answerB">
           <Properties>
             <Property name="text" type="java.lang.String" value="Chlorine"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AnwerBActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="answerBActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="Button3">
+        <Component class="javax.swing.JButton" name="answerC">
           <Properties>
             <Property name="text" type="java.lang.String" value="Hydrogen"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Button3ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="answerCActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="Button4">
+        <Component class="javax.swing.JButton" name="answerD">
           <Properties>
             <Property name="text" type="java.lang.String" value="Steel"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Button4ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="answerDActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="questionBox">
