@@ -29,26 +29,27 @@ public class DailySpending extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        daliySpendingCalculatorText = new javax.swing.JLabel();
+        spendMoneyOnText = new javax.swing.JLabel();
+        costOfItemText = new javax.swing.JLabel();
         costOfItem = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
+        numberOfDaysText = new javax.swing.JLabel();
         numberOfDays = new javax.swing.JTextField();
         CalculateButton = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
+        costOfHabitIs = new javax.swing.JLabel();
         costOfItemTotal = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         jPanel1.setBackground(new java.awt.Color(0, 255, 102));
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
-        jLabel1.setText("Daliy Spending Calculator");
+        daliySpendingCalculatorText.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        daliySpendingCalculatorText.setText("Daliy Spending Calculator");
 
-        jLabel2.setText("Think of something you spend money on everyday");
+        spendMoneyOnText.setText("Think of something you spend money on everyday");
 
-        jLabel3.setText("Daily cost of item:");
+        costOfItemText.setText("Daily cost of item:");
 
         costOfItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -56,7 +57,7 @@ public class DailySpending extends javax.swing.JFrame {
             }
         });
 
-        jLabel4.setText("Number of days");
+        numberOfDaysText.setText("Number of days");
 
         numberOfDays.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -65,8 +66,13 @@ public class DailySpending extends javax.swing.JFrame {
         });
 
         CalculateButton.setText("Calculate");
+        CalculateButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CalculateButtonActionPerformed(evt);
+            }
+        });
 
-        jLabel5.setText("The cost of your habit is");
+        costOfHabitIs.setText("The cost of your habit is");
 
         costOfItemTotal.setText("0.00");
 
@@ -79,9 +85,9 @@ public class DailySpending extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 380, Short.MAX_VALUE)
+                            .addComponent(daliySpendingCalculatorText, javax.swing.GroupLayout.DEFAULT_SIZE, 380, Short.MAX_VALUE)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel2)
+                                .addComponent(spendMoneyOnText)
                                 .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -89,17 +95,17 @@ public class DailySpending extends javax.swing.JFrame {
                                 .addGap(33, 33, 33)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(costOfHabitIs, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(costOfItemTotal))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addComponent(jLabel3)
+                                                .addComponent(costOfItemText)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(costOfItem))
                                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addComponent(jLabel4)
+                                                .addComponent(numberOfDaysText)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(numberOfDays, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                         .addGap(0, 0, Short.MAX_VALUE))))
@@ -113,22 +119,22 @@ public class DailySpending extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(daliySpendingCalculatorText, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(spendMoneyOnText, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(costOfItemText, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(costOfItem, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
+                    .addComponent(numberOfDaysText)
                     .addComponent(numberOfDays, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(CalculateButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
+                    .addComponent(costOfHabitIs)
                     .addComponent(costOfItemTotal))
                 .addGap(48, 48, 48))
         );
@@ -154,6 +160,14 @@ public class DailySpending extends javax.swing.JFrame {
     private void numberOfDaysActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numberOfDaysActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_numberOfDaysActionPerformed
+
+    private void CalculateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CalculateButtonActionPerformed
+        // TODO add your handling code here:
+        double cost = Double.parseDouble( costOfItem.getText() );
+        int days = Integer.parseInt(numberOfDays.getText());
+        double total = days*cost;
+        costOfItemTotal.setText("" + total);
+    }//GEN-LAST:event_CalculateButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -192,14 +206,14 @@ public class DailySpending extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton CalculateButton;
+    private javax.swing.JLabel costOfHabitIs;
     private javax.swing.JTextField costOfItem;
+    private javax.swing.JLabel costOfItemText;
     private javax.swing.JLabel costOfItemTotal;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel daliySpendingCalculatorText;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField numberOfDays;
+    private javax.swing.JLabel numberOfDaysText;
+    private javax.swing.JLabel spendMoneyOnText;
     // End of variables declaration//GEN-END:variables
 }
