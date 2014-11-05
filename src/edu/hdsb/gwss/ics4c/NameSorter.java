@@ -6,6 +6,7 @@
 package edu.hdsb.gwss.ics4c;
 
 import static edu.hdsb.gwss.ics3u.nick.BubbleSort.swap;
+import javax.swing.DefaultListModel;
 
 /**
  *
@@ -13,11 +14,15 @@ import static edu.hdsb.gwss.ics3u.nick.BubbleSort.swap;
  */
 public class NameSorter extends javax.swing.JFrame {
 
+    DefaultListModel list;
+
     /**
      * Creates new form NameSorter
      */
     public NameSorter() {
         initComponents();
+        list = new DefaultListModel();
+
     }
 
     /**
@@ -135,14 +140,15 @@ public class NameSorter extends javax.swing.JFrame {
 
     private void addToListButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addToListButtonActionPerformed
         // TODO add your handling code here:
+        list.add(list.getSize(), nameField.getText());
+        nameList.setModel(list);
     }
 
-    private void Sort(int[] data) {
+    private void sort(int[] data) {
         for (int pass = 0; pass < data.length; pass++) {
             for (int i = 0; i < data.length - 1; i++) {
                 if (data[i] > data[i + 1]) {
                     swap(data, i, i + 1);
-
                 }
             }
     }//GEN-LAST:event_addToListButtonActionPerformed
@@ -150,6 +156,21 @@ public class NameSorter extends javax.swing.JFrame {
 
     private void sortButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sortButtonActionPerformed
         // TODO add your handling code here:
+        DefaultListModel list = (DefaultListModel) nameList.getModel();
+
+        for (int pass = 0; pass < list.size(); pass++) {
+            for (int i = 0; i < list.size() - 1; i++) {
+                String name1 = (String) list.get(i);
+                String name2 = (String) list.get(i + 1);
+
+                if (name1.compareTo(name2) > 0) {
+                    String name = (String) list.remove(i);
+                    list.add(i + 1, name);
+                }
+            }
+            nameList.setModel(list);
+        }
+
     }//GEN-LAST:event_sortButtonActionPerformed
 
     /**
@@ -186,7 +207,7 @@ public class NameSorter extends javax.swing.JFrame {
 
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new RotationProgram().setVisible(true);
+                new NameSorter().setVisible(true);
             }
         });
     }
