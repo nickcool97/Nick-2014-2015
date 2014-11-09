@@ -1,8 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+//Name: Nicholas Dias
+//Date: 08/11/14
+//Version: 0.1
+//Description: Top ten list
 package edu.hdsb.gwss.ics4c;
 
 import javax.swing.DefaultListModel;
@@ -13,7 +12,7 @@ import javax.swing.ListModel;
  * @author Nick
  */
 public class TopTen extends javax.swing.JFrame {
-
+//String array of toptenSongs
     static final String[] topTenSongs = {
         "Shake It Off",
         "All About That Bass",
@@ -32,7 +31,7 @@ public class TopTen extends javax.swing.JFrame {
      */
     public TopTen() {
         initComponents();
-
+//Makes a list of songs and adds them to a list
         DefaultListModel list = new DefaultListModel();
         for (int i = 0; i < topTenSongs.length; i++) {
             list.add( i, topTenSongs[i] );
@@ -61,11 +60,6 @@ public class TopTen extends javax.swing.JFrame {
         topTenText.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         topTenText.setText("Top Ten");
 
-        topTenBox.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
-        });
         jScrollPane1.setViewportView(topTenBox);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);

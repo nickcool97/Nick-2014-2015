@@ -1,3 +1,7 @@
+//Nicholas Dias 
+//Version 0.1
+//22/10/14
+//Description:caluates the averge of the marks given
 package edu.hdsb.gwss.ics4c;
 
 import javax.swing.DefaultListModel;
@@ -12,7 +16,7 @@ import javax.swing.DefaultListModel;
  * @author Nick
  */
 public class AverageCalculator extends javax.swing.JFrame {
-    
+    //makes a list
     DefaultListModel list;
 
     /**
@@ -162,7 +166,7 @@ public class AverageCalculator extends javax.swing.JFrame {
     private void averageNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_averageNumberActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_averageNumberActionPerformed
-
+//adds a number to the list 
     private void addNumberButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addNumberButtonActionPerformed
         // TODO add your handling code here:
         
@@ -170,7 +174,7 @@ public class AverageCalculator extends javax.swing.JFrame {
         numberList.setModel(list);
         
     }//GEN-LAST:event_addNumberButtonActionPerformed
-
+//gets the average from all the numbers in the list
     private void calculateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calculateButtonActionPerformed
         
         list = (DefaultListModel) numberList.getModel();

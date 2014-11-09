@@ -1,8 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+//Nicholas Dias 
+//Version 0.1
+//22/10/14
+//Description: crates a music library that can be moved to a playlist and back and then playlist can be sorted in alphabetical order
 package edu.hdsb.gwss.ics4c;
 
 import javax.swing.DefaultListModel;
@@ -12,7 +11,7 @@ import javax.swing.DefaultListModel;
  * @author Nick
  */
 public class MusicLibrary extends javax.swing.JFrame {
-
+//crates two lists
     DefaultListModel libraryDataList;
     DefaultListModel playlistDataList;
 
@@ -184,13 +183,13 @@ public class MusicLibrary extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+//add the text song too the library list of songs
     private void addToLibraryButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addToLibraryButtonActionPerformed
         // TODO add your handling code here:
         libraryDataList.add(libraryDataList.getSize(), songTitleBox.getText());
         libraryList.setModel(libraryDataList);
     }//GEN-LAST:event_addToLibraryButtonActionPerformed
-
+//moves the song from the library to the playlsit
     private void movePlaylistButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_movePlaylistButtonActionPerformed
         // TODO add your handling code here:
         libraryDataList = (DefaultListModel) libraryList.getModel();
@@ -202,7 +201,7 @@ public class MusicLibrary extends javax.swing.JFrame {
         playlistDataList.add(playlistDataList.getSize(), song);
         playlistList.setModel(playlistDataList);
     }//GEN-LAST:event_movePlaylistButtonActionPerformed
-
+//moves music from playlist to library
     private void moveLibraryButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_moveLibraryButtonActionPerformed
         // TODO add your handling code here:
         libraryDataList = (DefaultListModel) libraryList.getModel();
@@ -214,7 +213,7 @@ public class MusicLibrary extends javax.swing.JFrame {
         //playlistDataList.add(playlistDataList.getSize(), song);
         playlistList.setModel(playlistDataList);
     }//GEN-LAST:event_moveLibraryButtonActionPerformed
-
+//Sorts the playlst in a alphabetical order
     private void sortPlaylistButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sortPlaylistButtonActionPerformed
         // TODO add your handling code here:
         

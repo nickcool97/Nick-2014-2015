@@ -1,8 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+//Nicholas Dias 
+//Version 0.1
+//22/10/14
+//Description:gets the amount of money spent on an idem for a number of days
 
 package edu.hdsb.gwss.ics4c;
 
@@ -160,7 +159,7 @@ public class DailySpending extends javax.swing.JFrame {
     private void numberOfDaysActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numberOfDaysActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_numberOfDaysActionPerformed
-
+//gets the total amount in dollors per day
     private void CalculateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CalculateButtonActionPerformed
         // TODO add your handling code here:
         double cost = Double.parseDouble( costOfItem.getText() );

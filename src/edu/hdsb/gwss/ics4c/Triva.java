@@ -1,8 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+//Name: Nicholas Dias
+//Date: 08/11/14
+//Version: 0.1
+//Description: Triva game 
 package edu.hdsb.gwss.ics4c;
 
 /**
@@ -10,14 +9,14 @@ package edu.hdsb.gwss.ics4c;
  * @author Nick
  */
 public class Triva extends javax.swing.JFrame {
-
+//String array with questions
     String[][] questions = {
         {"What is Supermans weakness", "Kryptonite", "Chlorine", "Hydrogen", "Steel"},
         {"What is supermans home plant", "Mars", " Krypton", "Pluto", "Venus "},
         {"What is Clark Kent's middle name?", "Thomas", "Joseph", "Jacob", "Walter"},
         {"What member of the Superman family died in Crisis on Infinite Earths?", "Superman", "Lois Lane", "Jimmy Olson", "Supergirl"},
         {"You Win", "Try again", "Exit", "", ""},};
-
+//int array with answer numbers
     int[] answers = {1, 2, 2, 4};
 
     int currentQuetion;
@@ -35,7 +34,7 @@ public class Triva extends javax.swing.JFrame {
         this.answerD.setText(questions[currentQuetion][4]);
 
     }
-
+//reset the triva back to the start
     public void reset() {
         if (currentQuetion <= this.questions.length) {
             this.questionBox.setText(questions[currentQuetion][0]);
@@ -170,7 +169,7 @@ public class Triva extends javax.swing.JFrame {
     private void answerAMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_answerAMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_answerAMouseClicked
-
+//if answer A is clicked
     private void answerAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_answerAActionPerformed
 
         
@@ -190,7 +189,7 @@ public class Triva extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_answerAActionPerformed
-
+//if answer B is clicked
     private void answerBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_answerBActionPerformed
         // TODO add your handling code here:
         if( currentQuetion == 4 ) {
@@ -208,7 +207,7 @@ public class Triva extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_answerBActionPerformed
-
+//if answer C is clicked
     private void answerCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_answerCActionPerformed
         // TODO add your handling code here:
         if (3 == this.answers[currentQuetion]) {
@@ -220,7 +219,7 @@ public class Triva extends javax.swing.JFrame {
 
         }
     }//GEN-LAST:event_answerCActionPerformed
-
+//if answer D is clicked
     private void answerDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_answerDActionPerformed
         // TODO add your handling code here:
         if (4 == this.answers[currentQuetion]) {

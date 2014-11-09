@@ -1,8 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+//Name: Nicholas Dias
+//Date: 08/11/14
+//Version: 0.1
+//Description: rotates names 
 package edu.hdsb.gwss.ics4c;
 
 import static edu.hdsb.gwss.ics4c.TopTen.topTenSongs;
@@ -13,6 +12,7 @@ import javax.swing.DefaultListModel;
  * @author Nick
  */
 public class RotationProgram extends javax.swing.JFrame {
+//String array of names
 
     private String[] names = {
         "Nicholas",
@@ -28,10 +28,10 @@ public class RotationProgram extends javax.swing.JFrame {
         initComponents();
         DefaultListModel list = new DefaultListModel();
         for (int i = 0; i < names.length; i++) {
-            list.add( i, names[i] );
+            list.add(i, names[i]);
         }
         namesBox.setModel(list);
-    
+
     }
 
     /**
@@ -123,31 +123,29 @@ public class RotationProgram extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+//when up button is pressed moves the name up one space
     private void upButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_upButtonActionPerformed
         // TODO add your handling code here:
-        
-        
+
         int x = namesBox.getSelectedIndex();
-        
-        
+
         DefaultListModel list = (DefaultListModel) namesBox.getModel();
-        if( x > 0 ) {
+        if (x > 0) {
             String name = (String) list.remove(x);
-            list.add( x-1, name );
+            list.add(x - 1, name);
         }
         namesBox.setModel(list);
-        
-        
-    }//GEN-LAST:event_upButtonActionPerformed
 
+
+    }//GEN-LAST:event_upButtonActionPerformed
+//when down button is preesed moves the name down one space
     private void downButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_downButtonActionPerformed
         // TODO add your handling code here:
         DefaultListModel list = (DefaultListModel) namesBox.getModel();
         int x = namesBox.getSelectedIndex();
-        if( x < list.size() -1  ) {
+        if (x < list.size() - 1) {
             String name = (String) list.remove(x);
-            list.add( x+1, name );
+            list.add(x + 1, name);
         }
         namesBox.setModel(list);
     }//GEN-LAST:event_downButtonActionPerformed

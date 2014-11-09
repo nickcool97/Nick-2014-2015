@@ -1,8 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+//Name: Nicholas Dias
+//Date: 08/11/14
+//Version: 0.1
+//Description: Vitrual buddy that talks to you
 
 package edu.hdsb.gwss.ics4c;
 
@@ -159,22 +158,22 @@ public class VirtualBuddy extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+//display support for support button
     private void supportiveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_supportiveButtonActionPerformed
         // TODO add your handling code here:
         outputLabel.setText("Its ok");
     }//GEN-LAST:event_supportiveButtonActionPerformed
-
+//display joke when joke button pushed
     private void jokeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jokeButtonActionPerformed
         // TODO add your handling code here:
         outputLabel.setText("Q: What do Alexander the Great and Kermit the Frog have in common A: Their middle names.");
     }//GEN-LAST:event_jokeButtonActionPerformed
-
+//display complimet when compliment button pushed
     private void complimentButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_complimentButtonActionPerformed
         // TODO add your handling code here:
         outputLabel.setText("You look good today!");
     }//GEN-LAST:event_complimentButtonActionPerformed
-
+//display a greeting when greet button pushed 
     private void greetButttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_greetButttonActionPerformed
         // TODO add your handling code here:
         outputLabel.setText("How are you doing today?");

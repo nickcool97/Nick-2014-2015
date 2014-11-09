@@ -1,8 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+//Nicholas Dias 
+//Version 0.1
+//22/10/14
+//Description: Sorts name in alphabetical 
 package edu.hdsb.gwss.ics4c;
 
 import static edu.hdsb.gwss.ics3u.nick.BubbleSort.swap;
@@ -13,7 +12,7 @@ import javax.swing.DefaultListModel;
  * @author Nick
  */
 public class NameSorter extends javax.swing.JFrame {
-
+//crates a list 
     DefaultListModel list;
 
     /**
@@ -137,7 +136,7 @@ public class NameSorter extends javax.swing.JFrame {
     private void nameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_nameFieldActionPerformed
-
+//adds text to the list
     private void addToListButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addToListButtonActionPerformed
         // TODO add your handling code here:
         list.add(list.getSize(), nameField.getText());
@@ -153,7 +152,7 @@ public class NameSorter extends javax.swing.JFrame {
             }
     }//GEN-LAST:event_addToListButtonActionPerformed
     }
-
+//All the strings in list get sorted 
     private void sortButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sortButtonActionPerformed
         // TODO add your handling code here:
         DefaultListModel list = (DefaultListModel) nameList.getModel();

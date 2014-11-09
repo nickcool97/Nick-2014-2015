@@ -1,6 +1,7 @@
 //Nicholas Dias 
 //Version 0.1
 //22/10/14
+//Description: displays a quote based on a group of quotes
 package edu.hdsb.gwss.ics4c;
 
 /**
@@ -9,7 +10,7 @@ package edu.hdsb.gwss.ics4c;
  */
 public class QuoteOfTheDay extends javax.swing.JFrame {
 
-    // TODO add your handling code here:
+    // String array of quotes
     static final String[] quotes = {
         "Never give up, for that is just the place and time that the tide will turn. -Harriet Beecher Stowe",
         "If you can dream it, you can do it -Walt Disney",
@@ -108,7 +109,7 @@ public class QuoteOfTheDay extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+//when quote button pressed a random quote is displayed on the screen
     private void QuoteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QuoteButtonActionPerformed
         int i = (int) (Math.random() * quotes.length);
         quoteBox.setText(quotes[i]);
