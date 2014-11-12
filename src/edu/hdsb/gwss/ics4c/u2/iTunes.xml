@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<itunes>
+    <artist>
+        <name>Hoodie Allen</name>
+        <album>
+            <title>All American</title>
+            <songs>Lucky Man</songs>
+            <songs>No interruptions</songs>
+            <songs>Eigthteen Cool</songs>
+            <songs>Top of the World</songs>
+            <songs>No faith in Brooklyn</songs>
+            <songs>Small Town</songs>
+            <songs>High Again</songs>
+            <songs>Ain't Gotta work</songs>
+        </album>
+    
+    <album>
+        <title>People Keep talking</title>
+        <songs>100 percent of something</songs>
+        <songs>People Keep Talking</songs>
+        <songs>Movie</songs>
+        <songs>Won't Mind</songs>
+        <songs>All about it</songs>
+        <songs>Dumb for you</songs>
+        <songs>Sirens</songs>
+        <songs>Act my Age</songs>
+        <songs>Numbers</songs>
+        <songs>Get it on the low</songs>
+        <songs>Show me What You're Made of</songs>
+        <songs>The real thing</songs>
+        <songs>Overtime</songs>
+        <songs>Against me</songs>
+        
+    </album>
+</artist>
+    
+<artist>
+    <name>TimeFlies</name>
+    <album>
+        <title>One Night</title>
+        <songs>One Night</songs>
+        <songs>Swoon</songs>
+        <songs>Worth It</songs>
+    </album>
+</artist>
+</itunes>
