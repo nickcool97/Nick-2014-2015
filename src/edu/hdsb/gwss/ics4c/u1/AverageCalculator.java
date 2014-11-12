@@ -2,7 +2,7 @@
 //Version 0.1
 //22/10/14
 //Description:caluates the averge of the marks given
-package edu.hdsb.gwss.ics4c;
+package edu.hdsb.gwss.ics4c.u1;
 
 import javax.swing.DefaultListModel;
 

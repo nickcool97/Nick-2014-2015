@@ -2,7 +2,7 @@
 //Version 0.1
 //22/10/14
 //Description: crates a music library that can be moved to a playlist and back and then playlist can be sorted in alphabetical order
-package edu.hdsb.gwss.ics4c;
+package edu.hdsb.gwss.ics4c.u1;
 
 import javax.swing.DefaultListModel;
 

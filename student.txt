@@ -1,0 +1,35 @@
+<class>
+<student>
+<name>
+Nick
+</name>
+<address>
+123 easy st
+</address>
+<phone>
+555-0001
+</phone>
+</student>
+<student>
+<name>
+Nicholas
+</name>
+<address>
+1 easy st
+</address>
+<phone>
+555-0002
+</phone>
+</student>
+<student>
+<name>
+Jordan
+</name>
+<address>
+12 easy st
+</address>
+<phone>
+555-0003
+</phone>
+</student>
+</class>

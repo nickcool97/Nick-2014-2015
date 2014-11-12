@@ -2,7 +2,7 @@
 //Date: 08/11/14
 //Version: 0.1
 //Description: Triva game 
-package edu.hdsb.gwss.ics4c;
+package edu.hdsb.gwss.ics4c.u1;
 
 /**
  *

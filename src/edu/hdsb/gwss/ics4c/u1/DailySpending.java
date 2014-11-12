@@ -3,7 +3,7 @@
 //22/10/14
 //Description:gets the amount of money spent on an idem for a number of days
 
-package edu.hdsb.gwss.ics4c;
+package edu.hdsb.gwss.ics4c.u1;
 
 /**
  *

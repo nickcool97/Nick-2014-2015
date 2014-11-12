@@ -2,7 +2,7 @@
 //Date: 08/11/14
 //Version: 0.1
 //Description: Top ten list
-package edu.hdsb.gwss.ics4c;
+package edu.hdsb.gwss.ics4c.u1;
 
 import javax.swing.DefaultListModel;
 import javax.swing.ListModel;

@@ -3,7 +3,7 @@
 //Version: 0.1
 //Description: Vitrual buddy that talks to you
 
-package edu.hdsb.gwss.ics4c;
+package edu.hdsb.gwss.ics4c.u1;
 
 /**
  *
@@ -94,7 +94,7 @@ public class VirtualBuddy extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Times New Roman", 2, 48)); // NOI18N
         jLabel1.setText("Virtual Buddy");
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/edu/hdsb/gwss/ics4c/images/Buddy.jpg"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/edu/hdsb/gwss/ics4c/u1/images/Buddy.jpg"))); // NOI18N
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);

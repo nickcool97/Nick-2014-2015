@@ -2,7 +2,7 @@
 //Version 0.1
 //22/10/14
 //Description: displays a quote based on a group of quotes
-package edu.hdsb.gwss.ics4c;
+package edu.hdsb.gwss.ics4c.u1;
 
 /**
  *

@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package edu.hdsb.gwss.ics4c;
+package edu.hdsb.gwss.ics4c.u1;
 
 /**
  *

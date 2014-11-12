@@ -2,9 +2,9 @@
 //Date: 08/11/14
 //Version: 0.1
 //Description: rotates names 
-package edu.hdsb.gwss.ics4c;
+package edu.hdsb.gwss.ics4c.u1;
 
-import static edu.hdsb.gwss.ics4c.TopTen.topTenSongs;
+import static edu.hdsb.gwss.ics4c.u1.TopTen.topTenSongs;
 import javax.swing.DefaultListModel;
 
 /**
