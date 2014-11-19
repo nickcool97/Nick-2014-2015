@@ -5,10 +5,11 @@
  */
 package edu.hdsb.gwss.ics4c.u2;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
 import nu.xom.Document;
 import nu.xom.Element;
-import nu.xom.Serializer;
 
 /**
  *
@@ -147,7 +148,7 @@ public class Friends extends javax.swing.JFrame {
 
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
         // TODO add your handling code here:
-                Element friend = new Element("friend");
+        Element friend = new Element("friend");
 
         Element name = new Element("name");
         Element phone = new Element("phone");
@@ -163,10 +164,12 @@ public class Friends extends javax.swing.JFrame {
         friend.appendChild(email);
 
         try {
-            Serializer serializer = new Serializer(System.out);
-            serializer.setIndent(4);
-            serializer.setMaxLength(64);
-            serializer.write(doc);
+            FileWriter fw = new FileWriter("friends.xml");
+            BufferedWriter bw = new BufferedWriter(fw);
+            bw.write(doc.toXML());
+
+
+            bw.close();
         } catch (IOException ex) {
             System.err.println(ex);
         }
