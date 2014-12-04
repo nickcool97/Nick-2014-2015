@@ -24,7 +24,6 @@ public class XMLFileWriter {
       BufferedWriter bw =  new BufferedWriter(fw);
       bw.write(name);
       
-//      bufferName.write(String);
       bw.close();
     }
     
