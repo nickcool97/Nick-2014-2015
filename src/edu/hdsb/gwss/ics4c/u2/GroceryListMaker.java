@@ -66,6 +66,11 @@ public class GroceryListMaker extends javax.swing.JFrame {
         departmentLabel.setText("Department");
 
         departmentDropBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Produce", "Grocery", "Meat", "Dairy" }));
+        departmentDropBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                departmentDropBoxActionPerformed(evt);
+            }
+        });
 
         quantityLabel.setText("Quantity");
 
@@ -158,6 +163,10 @@ public class GroceryListMaker extends javax.swing.JFrame {
             System.err.println(ex);
         }
     }//GEN-LAST:event_addToListBtnActionPerformed
+
+    private void departmentDropBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_departmentDropBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_departmentDropBoxActionPerformed
 
     /**
      * @param args the command line arguments
