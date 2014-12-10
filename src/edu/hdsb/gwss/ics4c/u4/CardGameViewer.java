@@ -12,6 +12,8 @@ package edu.hdsb.gwss.ics4c.u4;
  */
 public class CardGameViewer extends javax.swing.JFrame {
 
+    Deck d = new Deck();
+    
     /**
      * Creates new form CardGameViewer
      */
@@ -60,10 +62,10 @@ public class CardGameViewer extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void dealCardButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dealCardButtonMouseClicked
-        // TODO add your handling code here:
-        Deck cardDeck = new Deck();
+
         String cardName = cardDeck.deal();
         System.out.println( cardName );
+        
     }//GEN-LAST:event_dealCardButtonMouseClicked
 
     /**
