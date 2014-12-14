@@ -77,9 +77,10 @@ public class ReadingFile extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+//when button is pressed
     private void getDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_getDataActionPerformed
         // TODO add your handling code here:
+        //read the file and print it out
         File file = new File("friends.xml");
         Builder builder = new Builder();
         try {

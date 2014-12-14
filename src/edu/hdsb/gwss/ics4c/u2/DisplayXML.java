@@ -24,13 +24,14 @@ public class DisplayXML {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws Exception {
+        //crates new file and Builder
         File file = new File("friends.xml");
         Builder builder = new Builder();
         try {
             Document doc = builder.build(file);
             Element root = doc.getRootElement();
             Elements friends = root.getChildElements();
-
+//each friend print out 
             for (int j = 0; j<friends.size();j++){
                 System.out.println(friends.get(j).getFirstChildElement("name").getValue());
             }

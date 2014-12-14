@@ -147,13 +147,13 @@ public class Friends extends javax.swing.JFrame {
     }//GEN-LAST:event_txtNameActionPerformed
 
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
-        // TODO add your handling code here:
+        // crates new elements
         Element friend = new Element("friend");
 
         Element name = new Element("name");
         Element phone = new Element("phone");
         Element email = new Element("email");
-
+//gets name phone and email from text box
         name.appendChild(txtName.getText());
         phone.appendChild(txtPhone.getText());
         email.appendChild(txtEmail.getText());
@@ -164,6 +164,7 @@ public class Friends extends javax.swing.JFrame {
         friend.appendChild(email);
 
         try {
+            //writes to friens.xml
             FileWriter fw = new FileWriter("friends.xml");
             BufferedWriter bw = new BufferedWriter(fw);
             bw.write(doc.toXML());

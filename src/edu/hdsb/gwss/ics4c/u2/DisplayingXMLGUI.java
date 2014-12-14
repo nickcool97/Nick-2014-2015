@@ -18,12 +18,14 @@ import nu.xom.ParsingException;
  * @author Nick
  */
 public class DisplayingXMLGUI extends javax.swing.JFrame {
+    //crates new element called friends
 Elements friends;
     /**
      * Creates new form DisplayingXMLGUI
      */
     public DisplayingXMLGUI() {
         initComponents();
+        //removes all items in comboBox
         comboBox.removeAllItems();
        
     }
@@ -169,13 +171,14 @@ Elements friends;
     }//GEN-LAST:event_lblPActionPerformed
 
     private void importbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_importbtnActionPerformed
+        //crates new file and builder
         File file = new File("friends.xml");
         Builder builder = new Builder();
         try {
             Document doc = builder.build(file);
             Element root = doc.getRootElement();
             friends = root.getChildElements();
-
+//goes thougth each name and adds name to combo box
             for (int j = 0; j < friends.size(); j++) {
                 comboBox.addItem(friends.get(j).getFirstChildElement("name").getValue());
             }
@@ -190,8 +193,9 @@ Elements friends;
     }//GEN-LAST:event_comboBoxActionPerformed
 
     private void comboBoxItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_comboBoxItemStateChanged
-        // TODO add your handling code here:
+        // if friens is not null
         if(friends != null){
+            //print out there info in the gui
         int pos = comboBox.getSelectedIndex();
         lblName.setText(friends.get(pos).getFirstChildElement("name").getValue());
         lblPhone.setText(friends.get(pos).getFirstChildElement("phone").getValue());

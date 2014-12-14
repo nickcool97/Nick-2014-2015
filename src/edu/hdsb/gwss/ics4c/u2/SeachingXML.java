@@ -26,6 +26,7 @@ public class SeachingXML {
     public static void main(String[] args) {
         // TODO code application logic here
         Scanner input = new Scanner(System.in);
+        //enter what to search for
         System.out.println("Enter the animal name that you want to seach for");
         String animalName = input.nextLine();
 
@@ -37,7 +38,7 @@ public class SeachingXML {
             Document doc = builder.build(file);
             Element root = doc.getRootElement();
             animals = root.getChildElements();
-
+//go thurgth the file and find animal name that mataches
             for (int i = 0; i < animals.size(); i++) {
                 String name = (String) animals.get(i).getFirstChildElement("animalName").getValue();
 
@@ -55,6 +56,7 @@ public class SeachingXML {
                 System.out.println("Diet: " + animal.getFirstChildElement("diet").getValue());
                 System.out.println("Flying: " + animal.getFirstChildElement("flying").getValue());
             } else {
+                //if not found 
                 System.out.println("Animal not found");
             }
 

@@ -18,6 +18,7 @@ public class XMLFileWriter {
     /**
      * @param args the command line arguments
      */
+    //wrie nick in data.xml
     public static void main(String[] args) throws Exception {
       String name = "nick";
       FileWriter fw = new FileWriter("data.xml");

@@ -14,7 +14,7 @@ import java.io.PrintWriter;
  * @author Nick
  */
 public class StudentInfo {
-    
+    //varible names to print out
     public static final String CLASS_OPEN = "<class>";
     public static final String CLASS_CLOSED = "</class>";
     public static final String STUDENT_OPEN = "<student>";
@@ -29,6 +29,7 @@ public class StudentInfo {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws Exception {
+        //write to student.txt
         PrintWriter output = new PrintWriter( new File( "student.txt" ) );
         
         output.println( CLASS_OPEN );
@@ -71,7 +72,7 @@ public class StudentInfo {
         output.println(STUDENT_CLOSED);
         
         output.println( CLASS_CLOSED );
-        
+        //close file
         output.close();
     }
     

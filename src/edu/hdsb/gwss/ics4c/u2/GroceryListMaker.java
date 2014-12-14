@@ -21,7 +21,7 @@ import nu.xom.ParsingException;
  * @author Nick
  */
 public class GroceryListMaker extends javax.swing.JFrame {
-    
+    //crates new elements
     Element grocery = new Element("Grocery");
     Document doc = new Document(grocery);
     /**
@@ -143,6 +143,7 @@ public class GroceryListMaker extends javax.swing.JFrame {
         Element department = new Element("department");
         Element quantity = new Element("quantity");
 
+        //gets text from text boxes
         itemName.appendChild(itemBox.getText());
         department.appendChild( (String) (departmentDropBox.getSelectedItem() ) );
         quantity.appendChild( ( (Integer)quantitySpinner.getValue() ).toString() );
@@ -155,6 +156,7 @@ public class GroceryListMaker extends javax.swing.JFrame {
         grocery.appendChild(item);
 
         try {
+            //writes to file grocerylist.xml
             FileWriter fw = new FileWriter("grocerylist.xml");
             BufferedWriter bw = new BufferedWriter(fw);
             bw.write(doc.toXML());

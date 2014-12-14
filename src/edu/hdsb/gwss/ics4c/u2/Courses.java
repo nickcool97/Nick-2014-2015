@@ -16,6 +16,7 @@ import nu.xom.Serializer;
  * @author Nick
  */
 public class Courses extends javax.swing.JFrame {
+    //new element and document
     Element friends = new Element("friends");
     Document doc = new Document(friends);
 
@@ -174,7 +175,7 @@ public class Courses extends javax.swing.JFrame {
     private void schoolBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_schoolBoxActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_schoolBoxActionPerformed
-
+// when the add buttton is clicked
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
        Element friend = new Element("friend");
 
@@ -182,12 +183,12 @@ public class Courses extends javax.swing.JFrame {
         Element desciprion = new Element("Desciprion");
         Element teacher = new Element("Teacher");
         Element schoolBoard = new Element("SchoolBoard");
-
+//gets text from each text box
         code.appendChild(codeBox.getText());
         desciprion.appendChild(desciprtionBox.getText());
         teacher.appendChild(teacherBox.getText());
         schoolBoard.appendChild(schoolBox.getText());
-        
+//saves each text box to the varible
         friends.appendChild(friend);
         friend.appendChild(code);
         friend.appendChild(desciprion);
@@ -200,6 +201,7 @@ public class Courses extends javax.swing.JFrame {
             serializer.setMaxLength(64);
             serializer.write(doc);
         } catch (IOException ex) {
+            //print out varible
             System.err.println(ex);
         }
     }//GEN-LAST:event_btnAddActionPerformed

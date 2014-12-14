@@ -19,6 +19,7 @@ import nu.xom.ParsingException;
  * @author Nick
  */
 public class GroceryListViewer extends javax.swing.JFrame {
+//new elements
 
     Element grocery = new Element("Grocery");
     Document doc = new Document(grocery);
@@ -167,18 +168,20 @@ public class GroceryListViewer extends javax.swing.JFrame {
             Document doc = builder.build(file);
             grocery = doc.getRootElement();
             Elements items = grocery.getChildElements();
-
+//crates lists
             DefaultListModel produceListM = new DefaultListModel();
             DefaultListModel dairyListM = new DefaultListModel();
             DefaultListModel meatListM = new DefaultListModel();
             DefaultListModel groceryListM = new DefaultListModel();
+            //goes thought the file
             for (int j = 0; j < items.size(); j++) {
                 String department = items.get(j).getFirstChildElement("department").getValue();
                 String itemName = items.get(j).getFirstChildElement("name").getValue();
                 switch (department) {
+                    //case place in right text box
                     case "Dairy":
                         dairyListM.addElement(itemName);
-                        
+
                         break;
                     case "Produce":
                         produceListM.addElement(itemName);
@@ -192,7 +195,7 @@ public class GroceryListViewer extends javax.swing.JFrame {
                 }
 
             }
-
+//places name in gui
             dairyList.setModel(dairyListM);
             produceList.setModel(produceListM);
             meatList.setModel(meatListM);
