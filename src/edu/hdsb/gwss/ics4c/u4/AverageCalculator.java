@@ -6,7 +6,9 @@
 
 package edu.hdsb.gwss.ics4c.u4;
 
+import java.awt.Color;
 import java.math.BigDecimal;
+import javax.swing.BorderFactory;
 
 /**
  *
@@ -127,13 +129,11 @@ public class AverageCalculator extends javax.swing.JFrame {
                     .addComponent(grade4Box, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(averageBtn)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(averageTxt)
-                        .addGap(0, 9, Short.MAX_VALUE))
+                    .addComponent(averageTxt)
                     .addComponent(averageResults, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+                .addContainerGap(26, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -151,13 +151,45 @@ public class AverageCalculator extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void averageBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_averageBtnActionPerformed
+        boolean valid = true;
         int[] marks = new int[4];
-        marks[0] = Integer.parseInt( grade1Box.getText() );
-        marks[1] = Integer.parseInt( grade2Box.getText() );  
-        marks[2] = Integer.parseInt( grade3Box.getText() );
-        marks[3] = Integer.parseInt( grade4Box.getText() );
-        double average = AverageCalculatorClass.average(marks);
-        averageResults.setText("" + average);
+        try {
+            marks[0] = Integer.parseInt( grade1Box.getText() );
+            grade1Box.setBorder( null );
+        } catch (Exception e) {
+            valid = false;
+            grade1Box.setBorder( BorderFactory.createLineBorder(Color.red, 2 ));
+        }
+         try {
+            marks[1] = Integer.parseInt( grade2Box.getText() );
+            grade2Box.setBorder( null );
+        } catch (Exception e) {
+            valid = false;
+            grade2Box.setBorder( BorderFactory.createLineBorder(Color.red, 2 ));
+        }
+         try {
+            marks[2] = Integer.parseInt( grade3Box.getText() );
+            grade3Box.setBorder( null );
+        } catch (Exception e) {
+            valid = false;
+            grade3Box.setBorder( BorderFactory.createLineBorder(Color.red, 2 ));
+        }
+         try {
+            marks[3] = Integer.parseInt( grade4Box.getText() );
+            grade4Box.setBorder( null );
+        } catch (Exception e) {
+            valid = false;
+            grade4Box.setBorder( BorderFactory.createLineBorder(Color.red, 2 ));
+        }
+         if(!valid){
+             averageResults.setText("error please enter values again");
+         }
+       
+        
+        if( valid ) {
+            double average = AverageCalculatorClass.average(marks);
+            averageResults.setText("" + average);
+        }
     }//GEN-LAST:event_averageBtnActionPerformed
 
     /**
