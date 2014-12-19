@@ -147,6 +147,7 @@ public class TicketMasterGUI extends javax.swing.JFrame {
 
     private void buyTicketsbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buyTicketsbtnActionPerformed
         try {
+            //get the total amount for tier 1 the tickets cost if not enough print out Not enough tickets left
             if (tierBox.getSelectedIndex() == 0) {
                 if (TicketMasterClass.tier1remaming >= Integer.parseInt(numberOfTickets.getText())) {
                     TicketMasterClass.tier1remaming = TicketMasterClass.tier1remaming - Integer.parseInt(numberOfTickets.getText());
@@ -157,6 +158,7 @@ public class TicketMasterGUI extends javax.swing.JFrame {
                     ticketPriceBox.setText("Not enough tickets left");
 
                 }
+                 //get the total amount for tier 2 the tickets cost if not enough print out Not enough tickets left
             } else if (tierBox.getSelectedIndex() == 1) {
                 if (TicketMasterClass.tier2remaming >= Integer.parseInt(numberOfTickets.getText())) {
                     TicketMasterClass.tier2remaming = TicketMasterClass.tier2remaming - Integer.parseInt(numberOfTickets.getText());
@@ -167,6 +169,7 @@ public class TicketMasterGUI extends javax.swing.JFrame {
                     ticketPriceBox.setText("Not enough tickets left");
 
                 }
+                 //get the total amount for tier 3 the tickets cost if not enough print out Not enough tickets left
             } else if (tierBox.getSelectedIndex() == 2) {
                 if (TicketMasterClass.tier3remaming >= Integer.parseInt(numberOfTickets.getText())) {
                     TicketMasterClass.tier3remaming = TicketMasterClass.tier3remaming - Integer.parseInt(numberOfTickets.getText());
@@ -174,6 +177,7 @@ public class TicketMasterGUI extends javax.swing.JFrame {
                     int ticketPrice = TicketMasterClass.tier3Price * Integer.parseInt(numberOfTickets.getText());
                     ticketPriceBox.setText("$" + ticketPrice);
                 }
+                 //get the total amount for tier 4 the tickets cost if not enough print out Not enough tickets left
             } else {
                 if (TicketMasterClass.tier4remaming >= Integer.parseInt(numberOfTickets.getText())) {
                     TicketMasterClass.tier4remaming = TicketMasterClass.tier4remaming - Integer.parseInt(numberOfTickets.getText());
@@ -185,6 +189,7 @@ public class TicketMasterGUI extends javax.swing.JFrame {
 
                 }
             }
+            //if user enters a string make borader red
         } catch (Exception e) {
             numberOfTickets.setBorder(BorderFactory.createLineBorder(Color.red, 2));
         }
@@ -192,7 +197,7 @@ public class TicketMasterGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_buyTicketsbtnActionPerformed
 
     private void tierBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tierBoxActionPerformed
-
+//print out the amount of each tickets
         if (tierBox.getSelectedIndex() == 0) {
 
             ticketsRemaingBox.setText("" + TicketMasterClass.tier1remaming);

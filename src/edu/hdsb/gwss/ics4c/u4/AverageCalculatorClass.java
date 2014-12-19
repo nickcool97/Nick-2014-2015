@@ -13,6 +13,7 @@ package edu.hdsb.gwss.ics4c.u4;
 public class AverageCalculatorClass {
     public static double average( int[] marks){
         double sum =0;
+        //add togther all marks
        for(int i=0; i< marks.length; i++){
            sum = sum + marks[i];
        }

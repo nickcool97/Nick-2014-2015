@@ -62,7 +62,7 @@ public class CardGameViewer extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void dealCardButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dealCardButtonMouseClicked
-
+//print out the card picks
         String cardName = cardDeck.deal();
         System.out.println( cardName );
         

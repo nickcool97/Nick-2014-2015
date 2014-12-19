@@ -105,10 +105,11 @@ public class Converter extends javax.swing.JFrame {
     private void btnUSDMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnUSDMouseClicked
         NumberFormat cf = NumberFormat.getCurrencyInstance();
         String answer;
+        //convters the amount rate
         BigDecimal rate = new BigDecimal("1.03477");
         BigDecimal cad = new BigDecimal(txtCAD.getText());
         
-        
+        //convet can dollor to usd and prin it 
         double newamount = rate.doubleValue() * cad.doubleValue();
         answer = cf.format(newamount);
         txtAnswer.setText(answer);

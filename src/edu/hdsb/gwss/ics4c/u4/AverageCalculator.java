@@ -154,39 +154,48 @@ public class AverageCalculator extends javax.swing.JFrame {
         boolean valid = true;
         int[] marks = new int[4];
         try {
-            marks[0] = Integer.parseInt( grade1Box.getText() );
+            //get marks from first text box and change it to a int amd set borader to normal
             grade1Box.setBorder( null );
         } catch (Exception e) {
             valid = false;
+            //set borader to red
             grade1Box.setBorder( BorderFactory.createLineBorder(Color.red, 2 ));
         }
          try {
+              //get marks from second text box and change it to a int amd set borader to normal
             marks[1] = Integer.parseInt( grade2Box.getText() );
             grade2Box.setBorder( null );
         } catch (Exception e) {
             valid = false;
+            //set borader to red
             grade2Box.setBorder( BorderFactory.createLineBorder(Color.red, 2 ));
         }
          try {
+             //get marks from thrid text box and change it to a int amd set borader to normal
             marks[2] = Integer.parseInt( grade3Box.getText() );
             grade3Box.setBorder( null );
         } catch (Exception e) {
             valid = false;
+            //set borader to red
             grade3Box.setBorder( BorderFactory.createLineBorder(Color.red, 2 ));
         }
          try {
+             //get marks from fourth text box and change it to a int amd set borader to normal
             marks[3] = Integer.parseInt( grade4Box.getText() );
             grade4Box.setBorder( null );
         } catch (Exception e) {
             valid = false;
+            //set borader to red
             grade4Box.setBorder( BorderFactory.createLineBorder(Color.red, 2 ));
         }
          if(!valid){
+             //if not valid print out error please enter values again
              averageResults.setText("error please enter values again");
          }
        
         
         if( valid ) {
+            //if valid print out average
             double average = AverageCalculatorClass.average(marks);
             averageResults.setText("" + average);
         }

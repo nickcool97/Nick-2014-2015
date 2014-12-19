@@ -15,6 +15,7 @@ public class Currency {
 
     public BigDecimal convert(BigDecimal amount, BigDecimal rate) {
         BigDecimal answer;
+        //round the canandian dollors
         answer = amount.multiply(rate);
         answer = answer.setScale(2, BigDecimal.ROUND_HALF_UP);
         return answer;
