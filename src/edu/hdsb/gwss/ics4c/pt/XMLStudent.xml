@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<School>
+    <Student>
+        <Name>John</Name>
+        <age>17</age>
+        <mark1>50</mark1>
+        <mark2>58</mark2>
+        <mark3>86</mark3>
+        <mark4>86</mark4>
+     </Student>
+     <Student>
+         <Name>Tim</Name>
+         <age>15</age>
+        <mark1>100</mark1>
+        <mark2>100</mark2>
+        <mark3>100</mark3>
+        <mark4>100</mark4>
+     </Student>
+</School>
