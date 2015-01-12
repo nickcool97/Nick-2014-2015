@@ -159,7 +159,7 @@ public class studentGUI extends javax.swing.JFrame {
         StudentClass student = new StudentClass();
         int[] marks = new int[4];
         boolean valid = true;
-
+        nameBox.setBorder(BorderFactory.createLineBorder(Color.gray, 0));
         if (nameBox.getText().length() == 0) {
 
             nameBox.setBorder(BorderFactory.createLineBorder(Color.red, 2));
