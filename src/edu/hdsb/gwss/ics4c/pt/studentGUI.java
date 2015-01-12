@@ -5,9 +5,11 @@
  */
 package edu.hdsb.gwss.ics4c.pt;
 
+import java.awt.Color;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
+import javax.swing.BorderFactory;
 import nu.xom.Document;
 import nu.xom.Element;
 
@@ -155,20 +157,55 @@ public class studentGUI extends javax.swing.JFrame {
 
     private void addStudentButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addStudentButtonActionPerformed
         StudentClass student = new StudentClass();
-        try{
-        student.setName(nameBox.getText());
-        student.setAge(Integer.parseInt(ageBox.getText()));
         int[] marks = new int[4];
-        marks[0] = Integer.parseInt(mark1Box.getText());
-        marks[1] = Integer.parseInt(mark2Box.getText());
-        marks[2] = Integer.parseInt(mark3Box.getText());
-        marks[3] = Integer.parseInt(mark4Box.getText());
-        student.setMarks(marks);
-        } catch(Exception e) {
-            //catch execption and make boarder red
+        boolean valid = true;
+
+        if (nameBox.getText().length() == 0) {
+
+            nameBox.setBorder(BorderFactory.createLineBorder(Color.red, 2));
+            valid = false;
+        }
+        try {
+            student.setAge(Integer.parseInt(ageBox.getText()));
+            ageBox.setBorder(BorderFactory.createLineBorder(Color.gray, 0));
+        } catch (Exception e) {
+            ageBox.setBorder(BorderFactory.createLineBorder(Color.red, 2));
+            valid = false;
         }
 
-        addStudentToXML(student);
+        try {
+            marks[0] = Integer.parseInt(mark1Box.getText());
+            mark1Box.setBorder(BorderFactory.createLineBorder(Color.gray, 0));
+        } catch (Exception e) {
+            mark1Box.setBorder(BorderFactory.createLineBorder(Color.red, 2));
+            valid = false;
+        }
+        try {
+            marks[1] = Integer.parseInt(mark2Box.getText());
+            mark2Box.setBorder(BorderFactory.createLineBorder(Color.gray, 0));
+        } catch (Exception e) {
+            mark2Box.setBorder(BorderFactory.createLineBorder(Color.red, 2));
+            valid = false;
+        }
+        try {
+            marks[2] = Integer.parseInt(mark3Box.getText());
+            mark3Box.setBorder(BorderFactory.createLineBorder(Color.gray, 0));
+        } catch (Exception e) {
+            mark3Box.setBorder(BorderFactory.createLineBorder(Color.red, 2));
+            valid = false;
+        }
+        try {
+            marks[3] = Integer.parseInt(mark4Box.getText());
+            mark4Box.setBorder(BorderFactory.createLineBorder(Color.gray, 0));
+        } catch (Exception e) {
+            mark4Box.setBorder(BorderFactory.createLineBorder(Color.red, 2));
+            valid = false;
+        }
+
+        if (valid = true) {
+            student.setMarks(marks);
+            addStudentToXML(student);
+        }
 
     }//GEN-LAST:event_addStudentButtonActionPerformed
 
@@ -202,9 +239,6 @@ public class studentGUI extends javax.swing.JFrame {
         studentElement.appendChild(mark3);
         studentElement.appendChild(mark4);
         studentElement.appendChild(averageElement);
-
-        
-        
 
         //root it back so it shows in xml
         students.appendChild(studentElement);
